@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raghav Garg - Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Raghav Garg — Computer Engineering student at TIET, Web Developer, Data Science enthusiast, and Quantum Computing researcher." />
+    <meta name="author" content="Raghav Garg" />
+    <link rel="stylesheet" href="./css/home-page.css" />
+
+    <!-- Lucide icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+
+<body>
+
+
+
+    <!-- ░░ SCROLL BAR ░░ -->
+    <div class="scroll-watcher"></div>
+
+    <!-- ░░ THEME TOGGLE ░░ -->
+    <button id="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+        <span id="theme-icon">🌙</span>
+    </button>
+
+    <!-- ░░ MAIN CONTENT ░░ -->
+    <div class="body-content">
+
+        <!-- ── Side Nav ── -->
+        <nav id="side-menu" aria-label="Section navigation">
+            <div class="side-menu-icon" onclick="scrollToSection('section-1')" title="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+            </div>
+            <div class="side-menu-icon" onclick="scrollToSection('section-2')" title="Education">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+            </div>
+            <div class="side-menu-icon" onclick="scrollToSection('section-3')" title="Skills">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                </svg>
+            </div>
+            <div class="side-menu-icon" onclick="scrollToSection('section-4')" title="Experience">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+            </div>
+            <div class="side-menu-icon" onclick="scrollToSection('section-5')" title="Research">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
+                </svg>
+            </div>
+            <div class="side-menu-icon" onclick="scrollToSection('section-6')" title="Projects">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+            </div>
+            <div class="side-menu-icon" onclick="scrollToSection('section-7')" title="Certifications">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="6" />
+                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                </svg>
+            </div>
+            <div class="side-menu-icon" onclick="scrollToSection('contact-section')" title="Contact">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.07 3.38 2 2 0 0 1 3.04 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16a2 2 0 0 1 .92.92z" />
+                </svg>
+            </div>
+        </nav>
+
+        <!-- ░░ ALL SECTIONS ░░ -->
+        <div id="all-sections">
+
+            <!-- ──────────────────────────────── -->
+            <!-- § 1 · HERO                      -->
+            <!-- ──────────────────────────────── -->
+            <section id="section-1" class="sections">
+                <img id="profile-photo" src="./media/Raghav Garg.jpeg" alt="Raghav Garg" />
+
+                <div id="basic-info">
+                    <h2>Hi, I'm <span id="my-name"><span id="first-name">Raghav</span> Garg</span></h2>
+                    <h1>Turning Ideas into Reality</h1>
+                    <h3>B.E. Computer Engineering · TIET Patiala</h3>
+
+                    <p>
+                        Passionate Computer Engineering student at Thapar Institute of Engineering & Technology.
+                        I build full-stack web apps, explore machine learning pipelines, and research adversarial AI
+                        &amp;
+                        EEG-based disorder detection. Actively looking for opportunities where technology meets impact.
+                    </p>
+
+                    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:4px;">
+                        <span class="contact-chip">📞 7986886900</span>
+                        <span class="contact-chip">✉️ raghavgarg8219@gmail.com</span>
+                        <span class="contact-chip">🐙 raghavkjlp</span>
+                    </div>
+
+                    <div class="hero-links">
+                        <a id="resume-link" href="./media/raghav_garg_resume.pdf" target="_blank">📄 Download CV</a>
+                        <a class="hero-btn"
+                            style="text-decoration:none;background:var(--accent);color:#fff;padding:8px 24px;border-radius:8px;font-weight:600;font-size:14px;transition:all 0.3s;"
+                            href="https://github.com/raghavkjlp" target="_blank">GitHub ↗</a>
+                        <a class="hero-btn"
+                            style="text-decoration:none;background:var(--accent);color:#fff;padding:8px 24px;border-radius:8px;font-weight:600;font-size:14px;transition:all 0.3s;"
+                            href="https://linkedin.com/in/raghav-garg-8133b4323" target="_blank">LinkedIn ↗</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ──────────────────────────────── -->
+            <!-- § 2 · EDUCATION                 -->
+            <!-- ──────────────────────────────── -->
+            <section id="section-2" class="sections">
+                <div class="section-titles">
+                    <h1>EDUCATION</h1>
+                    <h2>my academic journey</h2>
+                </div>
+
+                <ul id="education-cards-list">
+
+                    <li class="education-card fade-in">
+                        <div class="edu-text">
+                            <span class="edu-degree">B.E. in Computer Engineering</span>
+                            <h3>Thapar Institute of Engineering and Technology</h3>
+                            <p class="edu-location">Patiala, India</p>
+                            <p class="edu-desc">Current student in the Computer Engineering program at one of India's
+                                premier
+                                technical institutes, with a focus on AI, ML, and full-stack development.</p>
+                            <span class="edu-date">June 2024 – June 2027</span>
+                        </div>
+                        <img src="./media/thapar.jpg" alt="Thapar University Campus" class="edu-campus-img" />
+                    </li>
+
+                    <li class="education-card fade-in">
+                        <div class="edu-text">
+                            <span class="edu-degree">Diploma in Computer Science &amp; Engineering</span>
+                            <h3>Thapar Polytechnic College</h3>
+                            <p class="edu-location">Patiala, India</p>
+                            <p class="edu-desc">Completed a 3-year diploma with a strong foundation in computer systems,
+                                networks, and
+                                programming principles.</p>
+                            <span class="edu-date">May 2021 – May 2024</span>
+                        </div>
+                        <img src="./media/diploma.jpg" alt="Thapar Polytechnic Campus" class="edu-campus-img" />
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- ──────────────────────────────── -->
+            <!-- § 3 · SKILLS                    -->
+            <!-- ──────────────────────────────── -->
+            <section id="section-3" class="sections">
+                <div class="section-titles">
+                    <h1>SKILLS</h1>
+                    <h2>what I work with</h2>
+                </div>
+
+                <ul id="skills-list" style="margin-top:60px;">
+
+                    <li class="skill-category fade-in">
+                        <h3>⌨️ Languages</h3>
+                        <hr />
+                        <ul>
+                            <li>C / C++</li>
+                            <li>Python</li>
+                            <li>HTML &amp; CSS</li>
+                            <li>JavaScript</li>
+                            <li>ReactJS</li>
+                        </ul>
+                    </li>
+
+                    <li class="skill-category fade-in">
+                        <h3>📦 Frameworks &amp; Libraries</h3>
+                        <hr />
+                        <ul>
+                            <li>Flask</li>
+                            <li>Streamlit</li>
+                            <li>Pandas &amp; NumPy</li>
+                            <li>Scikit-learn</li>
+                            <li>Docker &amp; Git</li>
+                        </ul>
+                    </li>
+
+                    <li class="skill-category fade-in">
+                        <h3>🧠 CS Fundamentals</h3>
+                        <hr />
+                        <ul>
+                            <li>Data Structures &amp; Algorithms</li>
+                            <li>AI / Machine Learning</li>
+                            <li>Computer Vision</li>
+                            <li>IoT &amp; Microcontrollers</li>
+                            <li>Database Management</li>
+                        </ul>
+                    </li>
+
+                    <li class="skill-category fade-in">
+                        <h3>🛠️ Tools</h3>
+                        <hr />
+                        <ul>
+                            <li>VS Code</li>
+                            <li>JupyterLab</li>
+                            <li>MATLAB</li>
+                            <li>Tableau</li>
+                            <li>Arduino IDE</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- ──────────────────────────────── -->
+            <!-- § 4 · EXPERIENCE                -->
+            <!-- ──────────────────────────────── -->
+            <section id="section-4" class="sections">
+                <div class="section-titles">
+                    <h1>EXPERIENCE</h1>
+                    <h2>what I've done</h2>
+                </div>
+
+                <div style="margin-top:70px; display:flex; flex-direction:column; gap:20px;">
+
+                    <!-- CodsAI – most recent, on top -->
+                    <div class="experience fade-in">
+                        <div class="exp-header">
+                            <div>
+                                <h1>Summer Intern – Full Stack &amp; AI</h1>
+                                <h3>CodsAI · Remote</h3>
+                            </div>
+                            <span class="exp-duration">June 2026 – July 2026</span>
+                        </div>
+                        <ul>
+                            <li>Developed and deployed web features for CodsAI's platform using
+                                <strong>ReactJS</strong>,
+                                <strong>Node.js</strong>, and <strong>MongoDB</strong>.
+                            </li>
+                            <li>Collaborated on AI-integrated modules, improving user-facing interfaces and backend API
+                                performance.
+                            </li>
+                            <li>Contributed to production codebase within an agile sprint cycle.</li>
+                        </ul>
+                        <div class="tech-tags" style="margin-top:12px;">
+                            <span class="tech-tag">ReactJS</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                    </div>
+
+                    <!-- DC Office AI/ML Intern -->
+                    <div class="experience fade-in">
+                        <div class="exp-header">
+                            <div>
+                                <h1>Intern – AI &amp; Machine Learning</h1>
+                                <h3>DC Office Patiala · On-site</h3>
+                            </div>
+                            <span class="exp-duration">June 2026</span>
+                        </div>
+                        <ul>
+                            <li>Worked on AI/ML projects under the district administration, applying data-driven
+                                techniques to civic
+                                use cases.</li>
+                            <li>Built and evaluated machine learning models for data analysis and automation tasks.</li>
+                            <li>Presented findings and dashboards to government stakeholders.</li>
+                        </ul>
+                        <div class="tech-tags" style="margin-top:12px;">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                        </div>
+                    </div>
+
+                    <!-- Freelance -->
+                    <div class="experience fade-in">
+                        <div class="exp-header">
+                            <div>
+                                <h1>Freelance Web Developer</h1>
+                                <h3>Real Clients · Remote</h3>
+                            </div>
+                            <span class="exp-duration">2023 – 2026</span>
+                        </div>
+                        <ul>
+                            <li>Delivered full-stack websites for multiple real clients including live NGO portals (<a
+                                    href="https://sksjt.org/" target="_blank"
+                                    style="color:var(--accent);">sksjt.org</a>, <a href="https://janhitsamiti.org/"
+                                    target="_blank" style="color:var(--accent);">janhitsamiti.org</a>).
+                            </li>
+                            <li>Built end-to-end solutions using <strong>ReactJS</strong>, <strong>Node.js</strong>, and
+                                <strong>MongoDB</strong>, including admin panels, galleries, and donation flows.
+                            </li>
+                            <li>Managed SEO, deployment (GitHub Pages, Netlify), and post-launch maintenance
+                                independently.</li>
+                        </ul>
+                        <div class="tech-tags" style="margin-top:12px;">
+                            <span class="tech-tag">ReactJS</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">Netlify</span>
+                        </div>
+                    </div>
+
+                    <!-- Quantum Workshop -->
+                    <div class="experience fade-in">
+                        <div class="exp-header">
+                            <div>
+                                <h1>Quantum Computing Workshop Coordinator</h1>
+                                <h3>TIET · Hybrid Computing Club</h3>
+                            </div>
+                            <span class="exp-duration">2025</span>
+                        </div>
+                        <ul>
+                            <li>Managed logistics, speaker coordination, and developed the official workshop website.
+                            </li>
+                            <li>Introduced 100+ students to quantum computing concepts and hands-on Qiskit sessions.
+                            </li>
+                        </ul>
+                        <div class="tech-tags" style="margin-top:12px;">
+                            <span class="tech-tag">Qiskit</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Event Management</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ──────────────────────────────── -->
+            <!-- § 5 · RESEARCH                  -->
+            <!-- ──────────────────────────────── -->
+            <section id="section-5" class="sections">
+                <div class="section-titles">
+                    <h1>RESEARCH</h1>
+                    <h2>what I'm exploring</h2>
+                </div>
+
+                <div class="research-container" style="margin-top:70px;">
+
+                    <div class="pub-card fade-in">
+                        <img src="./media/certificate_Raghav Garg_1436_page-0001.jpg" alt="ICDAM-2026 Certificate"
+                            class="pub-cert-img lightbox-trigger" title="Click to enlarge" />
+                        <div class="pub-body">
+                            <h3>Obfuscating Text-Based Neural Fake News Classifiers under Adversarial Settings</h3>
+                            <div class="pub-venue">7th International Conference on Data Analytics and Management
+                                (ICDAM-2026) ·
+                                London, UK</div>
+                            <p class="pub-abstract">
+                                Developed a word-level black-box adversarial attack framework (INFLEXA) targeting
+                                transformer-based NLP
+                                models for disinformation detection research, presenting imperceptible textual
+                                perturbations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pub-card fade-in">
+                        <img src="./media/DOC-20260410-WA0028. (1)_page-0001.jpg" alt="ICMLDE-2025 Certificate"
+                            class="pub-cert-img lightbox-trigger" title="Click to enlarge" />
+                        <div class="pub-body">
+                            <h3>AI-Powered HCI System for Diagnosis of Depression Disorder</h3>
+                            <div class="pub-venue">International Conference on Machine Learning and Data Engineering
+                                (ICMLDE-2025) ·
+                                UPES Dehradun</div>
+                            <p class="pub-abstract">
+                                Implemented a machine learning pipeline and EEG signal analysis framework (using MNE) to
+                                diagnose
+                                depression disorder through non-linear, frequency, and connectivity features.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pub-card fade-in">
+                        <img src="./media/GSEACT-225_2_page-0001.jpg" alt="IEEE GSEACT-2026 Certificate"
+                            class="pub-cert-img lightbox-trigger" title="Click to enlarge" />
+                        <div class="pub-body">
+                            <h3>A Deep Multimodal Hybrid Model for Visual-Semantic Automotive Comparison</h3>
+                            <div class="pub-venue">IEEE Global Symposium on Emerging and Communication Technologies
+                                (GSEACT-2026) ·
+                                Hyderabad</div>
+                            <p class="pub-abstract">
+                                Designed a hybrid deep learning model combining visual features and structured specs to
+                                perform semantic
+                                automotive comparisons and intelligent recommendations.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ──────────────────────────────── -->
+            <!-- § 6 · PROJECTS                  -->
+            <!-- ──────────────────────────────── -->
+            <section id="section-6" class="sections">
+                <div class="section-titles">
+                    <h1>PROJECTS</h1>
+                    <h2>things I've built</h2>
+                </div>
+
+                <div class="projects-container" style="margin-top:70px;">
+
+                    <div class="project-card fade-in">
+                        <div>
+                            <h4>🌐 NGO Website (Live)</h4>
+                            <p>Donation management, gallery, and admin panel with responsive design and SEO
+                                optimization. Deployed via
+                                GitHub Pages &amp; Netlify.</p>
+                        </div>
+                        <div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JS</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <a href="https://github.com/raghavkjlp" class="gh-link" target="_blank"
+                                style="margin-top:12px; display:inline-flex; margin-right:16px;">GitHub →</a>
+                            <a href="https://sksjt.org/" class="gh-link" target="_blank"
+                                style="margin-top:12px; display:inline-flex; color: var(--accent);">Live Site →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div>
+                            <h4>🌐 Jan Hit Samiti (Live)</h4>
+                            <p>Social welfare association platform featuring public programs, outreach portals, and
+                                dynamic gallery
+                                showcase. Fully responsive design.</p>
+                        </div>
+                        <div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JS</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <a href="https://github.com/raghavkjlp" class="gh-link" target="_blank"
+                                style="margin-top:12px; display:inline-flex; margin-right:16px;">GitHub →</a>
+                            <a href="https://janhitsamiti.org/" class="gh-link" target="_blank"
+                                style="margin-top:12px; display:inline-flex; color: var(--accent);">Live Site →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div>
+                            <h4>📰 News Nation – Live News Platform</h4>
+                            <p>News aggregator with category filters, search functionality, and mobile-optimized UI
+                                powered by the
+                                NewsData API.</p>
+                        </div>
+                        <div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JS</span>
+                                <span class="tech-tag">NewsData API</span>
+                            </div>
+                            <a href="https://github.com/raghavkjlp" class="gh-link" target="_blank"
+                                style="margin-top:12px; display:inline-flex;">GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div>
+                            <h4>🏥 MediMind – Healthcare Hackathon</h4>
+                            <p>Designed responsive UI with dashboard layouts and patient interface for a healthcare
+                                assistant platform
+                                built during a hackathon.</p>
+                        </div>
+                        <div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">ReactJS</span>
+                            </div>
+                            <a href="https://github.com/raghavkjlp" class="gh-link" target="_blank"
+                                style="margin-top:12px; display:inline-flex;">GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div>
+                            <h4>⚡ INFLEXA Adversarial Framework</h4>
+                            <p>Word-level black-box adversarial attack framework targeting transformer-based NLP models
+                                for
+                                disinformation detection research.</p>
+                        </div>
+                        <div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">HuggingFace</span>
+                            </div>
+                            <a href="https://github.com/raghavkjlp" class="gh-link" target="_blank"
+                                style="margin-top:12px; display:inline-flex;">GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div>
+                            <h4>🧠 EEG Mental Disorder Classifier</h4>
+                            <p>ML pipeline for classifying mental disorders from EEG signals using MNE, frequency-domain
+                                features, and
+                                connectivity matrices.</p>
+                        </div>
+                        <div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">MNE</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">NumPy</span>
+                            </div>
+                            <a href="https://github.com/raghavkjlp" class="gh-link" target="_blank"
+                                style="margin-top:12px; display:inline-flex;">GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div>
+                            <h4>🚗 Multimodal Automotive Comparison Model</h4>
+                            <p>Deep learning hybrid model fusing visual &amp; structured specs for intelligent car
+                                comparison and
+                                recommendation.</p>
+                        </div>
+                        <div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Computer Vision</span>
+                            </div>
+                            <a href="https://github.com/raghavkjlp" class="gh-link" target="_blank"
+                                style="margin-top:12px; display:inline-flex;">GitHub →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ──────────────────────────────── -->
+            <!-- § 7 · CERTIFICATIONS            -->
+            <!-- ──────────────────────────────── -->
+            <section id="section-7" class="sections">
+                <div class="section-titles">
+                    <h1>AWARDS</h1>
+                    <h2>certifications &amp; achievements</h2>
+                </div>
+
+                <div class="cert-grid" style="margin-top:70px;">
+
+                    <div class="cert-card fade-in">
+                        <img src="./media/sathack_page-0001.jpg" alt="SATHACK Hackathon Certificate"
+                            class="lightbox-trigger" title="Click to enlarge" />
+                        <div class="cert-card-body">
+                            <h4>🏆 SATHACK Hackathon – 10th Position</h4>
+                            <p>Thapar Institute (Saturnala 2025)</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card fade-in">
+                        <img src="./media/Raghav Garg_page-0001.jpg" alt="MERN with Secure Auth Certificate"
+                            class="lightbox-trigger" title="Click to enlarge" />
+                        <div class="cert-card-body">
+                            <h4>💻 MERN with Secure Auth Bootcamp</h4>
+                            <p>Thapar &amp; Xebia (JWT &amp; Redux Toolkit)</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card fade-in">
+                        <img src="./media/Raghav Garg 1_page-0001.jpg" alt="Next-Gen Frontend Engineering Certificate"
+                            class="lightbox-trigger" title="Click to enlarge" />
+                        <div class="cert-card-body">
+                            <h4>🚀 Next-Gen Frontend Engineering</h4>
+                            <p>Thapar &amp; Xebia (TypeScript &amp; Next.js)</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card fade-in">
+                        <img src="./media/Raghavm.jpg" alt="Monolith to Microservices Certificate"
+                            class="lightbox-trigger" title="Click to enlarge" />
+                        <div class="cert-card-body">
+                            <h4>🏗️ From Monolith to Microservices</h4>
+                            <p>Thapar &amp; Xebia (Scalable Applications)</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card fade-in">
+                        <img src="./media/deloitte_page-0001.jpg" alt="Deloitte Job Simulation Certificate"
+                            class="lightbox-trigger" title="Click to enlarge" />
+                        <div class="cert-card-body">
+                            <h4>📊 Data Analytics Job Simulation</h4>
+                            <p>Deloitte (Forage)</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card fade-in">
+                        <img src="./media/DATA SCIENCE_page-0001.jpg" alt="Simplilearn Data Science Certificate"
+                            class="lightbox-trigger" title="Click to enlarge" />
+                        <div class="cert-card-body">
+                            <h4>🐍 Introduction to Data Science</h4>
+                            <p>Simplilearn SkillUp</p>
+                        </div>
+                    </div>
+
+                    <!-- ── New certificates ── -->
+                    <div class="cert-card fade-in">
+                        <div class="cert-card-body cert-text-only">
+                            <div class="cert-icon-big">📈</div>
+                            <h4>MS Excel – Data Analysis</h4>
+                            <p>Analytics Vidhya</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card fade-in">
+                        <div class="cert-card-body cert-text-only">
+                            <div class="cert-icon-big">☁️</div>
+                            <h4>Microsoft Azure Administrator</h4>
+                            <p>Microsoft (AZ-104 Path)</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card fade-in">
+                        <div class="cert-card-body cert-text-only">
+                            <div class="cert-icon-big">🤖</div>
+                            <h4>Copilot Immersion Experience</h4>
+                            <p>Microsoft</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card fade-in">
+                        <div class="cert-card-body cert-text-only">
+                            <div class="cert-icon-big">🌐</div>
+                            <h4>Web Development Bootcamp</h4>
+                            <p>Udemy (HTML, CSS, JS, Node)</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card fade-in">
+                        <div class="cert-card-body cert-text-only">
+                            <div class="cert-icon-big">💼</div>
+                            <h4>Software Engineering Simulation</h4>
+                            <p>JP Morgan Chase (Forage)</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card fade-in">
+                        <div class="cert-card-body cert-text-only">
+                            <div class="cert-icon-big">🛡️</div>
+                            <h4>Cybersecurity Analyst Simulation</h4>
+                            <p>Tata Group (Forage)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ──────────────────────────────── -->
+            <!-- § 8 · CONTACT                   -->
+            <!-- ──────────────────────────────── -->
+            <section id="contact-section" class="sections">
+                <div class="section-titles">
+                    <h1>CONTACT</h1>
+                    <h2>Get in Touch</h2>
+                </div>
+
+                <div class="contact-icons" style="margin-top:70px;">
+                    <div class="notch-container">
+                        <span class="carrier">Jio True5G</span>
+                        <div class="notch"></div>
+                        <div class="status-indicators">
+                            <span class="signal-bar">📶</span>
+                            <span class="network-type">5G</span>
+                            <span class="battery-icon">🔋</span>
+                        </div>
+                    </div>
+
+                    <!-- Time and Day Date are now INSIDE the phone screen -->
+                    <div id="datetime"></div>
+
+                    <div class="icons-list">
+
+                        <a href="https://linkedin.com/in/raghav-garg-8133b4323" class="icon-link" target="_blank"
+                            id="linkedin-link">
+                            <div class="icon-circle linkedin-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="contact-svg">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </div>
+                            <p>My LinkedIn</p>
+                        </a>
+
+                        <a href="https://topmate.io/raghav_garg" class="icon-link" target="_blank" id="topmate-link">
+                            <div class="icon-circle topmate-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="contact-svg">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <p>My Topmate</p>
+                        </a>
+
+                        <a href="https://github.com/raghavkjlp" class="icon-link" target="_blank" id="github-link">
+                            <div class="icon-circle github-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="contact-svg">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p>My GitHub</p>
+                        </a>
+
+                        <a href="mailto:raghavgarg8219@gmail.com" class="icon-link" id="email-link">
+                            <div class="icon-circle email-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="contact-svg">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <p>My Email</p>
+                        </a>
+
+                        <a href="tel:+917986886900" class="icon-link" id="phone-link">
+                            <div class="icon-circle phone-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="contact-svg">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.07 3.38 2 2 0 0 1 3.04 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16a2 2 0 0 1-.92-.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p>Call Me</p>
+                        </a>
+
+                    </div>
+
+                    <div class="chin-container">
+                        <div class="chin"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div><!-- /#all-sections -->
+
+        <!-- ░░ FOOTER ░░ -->
+        <footer>
+            <p>Made with <span>♥</span> by <strong>Raghav Garg</strong> · &copy; 2026</p>
+            <p style="font-size:11px; margin-top:4px;">Built with HTML, CSS &amp; Vanilla JS</p>
+        </footer>
+
+    </div><!-- /.body-content -->
+
+    <!-- ░░ LIGHTBOX MODAL ░░ -->
+    <div id="lightbox-overlay" onclick="closeLightbox()" aria-modal="true" role="dialog" aria-label="Image viewer">
+        <div id="lightbox-inner" onclick="event.stopPropagation()">
+            <button id="lightbox-close" onclick="closeLightbox()" title="Close">&times;</button>
+            <img id="lightbox-img" src="" alt="Certificate" />
+            <p id="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <script src="./script/home-page.js"></script>
+
+    <script>
+        /* ── Lightbox ── */
+        function openLightbox(src, caption) {
+            const overlay = document.getElementById('lightbox-overlay');
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption || '';
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox-overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+        // Wire all .lightbox-trigger images
+        document.querySelectorAll('.lightbox-trigger').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', () => openLightbox(img.src, img.alt));
+        });
+    </script>
+</body>
+
+</html>
